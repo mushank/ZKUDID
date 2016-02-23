@@ -11,9 +11,12 @@
 
 @interface ZKUDIDManager : NSObject
 
+///========================================================================
+///=== Usually, the method `+ (NSString *)value` is enough for you to use.
+///========================================================================
 /**
  *  @method             value, Requires iOS6.0 or above.
- *  @abstract           Obtain Unique Device Identity(UDID)
+ *  @abstract           Obtain Unique Device Identity(UDID). If it already exits, return the exit one, otherwise generate a new one and store it into the keychain then return.
  *  @discussion         Use 'identifierForVendor + keychain' to make sure UDID consistency after App delete or reinstall.
  *  @param              NULL
  *  @param result       return UDID String
@@ -21,6 +24,7 @@
 + (NSString *)value;
 
 
+#pragma mark - Extension Method: Insert, Delete, Update, Select
 /**
  *  @method             selectKeychainItemWithIdentifier: serviceName:
  *  @abstract           To find out if the item already exists in the keychain

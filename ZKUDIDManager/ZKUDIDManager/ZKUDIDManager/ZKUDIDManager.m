@@ -33,7 +33,7 @@ static NSString *kKeychainUDIDItemServiceName = @"com.mushank.ZKUDIDManager"; /*
     return value;
 }
 
-#pragma mark - Insert, Delete, Update, Select
+#pragma mark - Extension Method: Insert, Delete, Update, Select
 /**
  To find out if our UDID string already exists in the keychain (and what the value of the UDID string is) we use the SecItemCopyMatching function.
  */

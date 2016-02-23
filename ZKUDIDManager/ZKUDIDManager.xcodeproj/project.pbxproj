@@ -48,8 +48,8 @@
 		DD1427521C76C30C00B39324 = {
 			isa = PBXGroup;
 			children = (
-				DD54443E1C7AC7E8003CC33D /* Security.framework */,
 				DD14275D1C76C30C00B39324 /* ZKUDIDManager */,
+				DD5444421C7C29E2003CC33D /* Frameworks */,
 				DD14275C1C76C30C00B39324 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +94,14 @@
 				DD1427771C76C55C00B39324 /* ZKUDIDManager.m */,
 			);
 			path = ZKUDIDManager;
+			sourceTree = "<group>";
+		};
+		DD5444421C7C29E2003CC33D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD54443E1C7AC7E8003CC33D /* Security.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
