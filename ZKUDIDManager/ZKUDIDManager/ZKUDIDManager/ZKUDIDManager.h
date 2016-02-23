@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface ZKUDIDManager : NSObject
 
 /**
@@ -19,49 +20,48 @@
  */
 + (NSString *)value;
 
-/**
- *  @method             getUUIDFVString, Requires iOS6.0 or above.
- *  @abstract           Obtain UUIDString of identifierForVendor
- *  @discussion
- *  @param              NULL
- *  @param result       return UUIDString of identifierForVendor
- */
-+ (NSString *)getUUIDFVString;
 
 /**
- *  @method             readUDIDFromKeychain
- *  @abstract
+ *  @method             selectKeychainItemWithIdentifier: serviceName:
+ *  @abstract           To find out if the item already exists in the keychain
  *  @discussion
- *  @param              NULL
+ *  @param              identifier
+ *  @param              serviceName
+ *  @param result       If exist, return the item, else return nil
+ */
++ (NSData *)selectKeychainItemWithIdentifier:(NSString *)identifier serviceName:(NSString *)serviceName;
+
+/**
+ *  @method             insertKeychainItemWithValue: identifier: serviceName:
+ *  @abstract           Insert an keychain item
+ *  @discussion
+ *  @param              value
+ *  @param              identifier
+ *  @param              serviceName
+ *  @param result       If success, return YES, else return NO
+ */
++ (BOOL)insertKeychainItemWithValue:(NSString *)value identifier:(NSString *)identifier serviceName:(NSString *)serviceName;
+
+/**
+ *  @method             updateKeychainItemWithValue: identifier: serviceName:
+ *  @abstract           Update a keychain item
+ *  @discussion
+ *  @param              value
+ *  @param              identifier
+ *  @param              serviceName
  *  @param result       If exist, return UDID String, else return nil
  */
-+ (NSString *)readUDIDFromKeychain;
++ (BOOL)updateKeychainItemWithValue:(NSString *)value identifier:(NSString *)identifier  serviceName:(NSString *)serviceName;
 
 /**
- *  @method             writeUDIDToKeychain:
- *  @abstract
- *  @discussion
- *  @param              UDIDString
- *  @param result       If success, return YES, else return NO
- */
-+ (BOOL)writeUDIDToKeychain:(NSString *)UDIDString;
-
-/**
- *  @method             updateUDIDInKeychain:
- *  @abstract
- *  @discussion
- *  @param              newUDIDString
- *  @param result       If success, return YES, else return NO
- */
-+ (BOOL)updateUDIDInKeychain:(NSString *)newUDIDString;
-
-/**
- *  @method             removeUDIDFromKeychain
- *  @abstract
+ *  @method             deleteKeychainItemWithIdentifier: serviceName:
+ *  @abstract           Delete a keychain item
  *  @discussion
  *  @param              NULL
+ *  @param              identifier
+ *  @param              serviceName
  *  @param result       If success, return YES, else return NO
  */
-+ (BOOL)removeUDIDFromKeychain;
++ (BOOL)deleteKeychainItemWithIdentifier:(NSString *)identifier serviceName:(NSString *)serviceName;
 
 @end

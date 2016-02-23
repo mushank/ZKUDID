@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "ZKUDIDManager.h"
 
 @interface AppDelegate ()
 
@@ -37,11 +36,6 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    
-    NSString *UDIDString = [ZKUDIDManager value];
-    [ZKUDIDManager removeUDIDFromKeychain];
-    NSLog(@"UDID In Keychain    : %@", UDIDString);
-    NSLog(@"IdentifierForVender : %@", [[UIDevice currentDevice].identifierForVendor UUIDString]);
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

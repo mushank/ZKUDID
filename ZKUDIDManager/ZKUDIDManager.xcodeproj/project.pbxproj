@@ -14,7 +14,7 @@
 		DD14276B1C76C30C00B39324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD14276A1C76C30C00B39324 /* Assets.xcassets */; };
 		DD14276E1C76C30C00B39324 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD14276C1C76C30C00B39324 /* LaunchScreen.storyboard */; };
 		DD1427781C76C55C00B39324 /* ZKUDIDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1427771C76C55C00B39324 /* ZKUDIDManager.m */; };
-		DD54443D1C78BD93003CC33D /* KeychainAccessGroups.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD54443C1C78BD93003CC33D /* KeychainAccessGroups.plist */; };
+		DD54443F1C7AC7E8003CC33D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD54443E1C7AC7E8003CC33D /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,7 @@
 		DD14276F1C76C30C00B39324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD1427761C76C55C00B39324 /* ZKUDIDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKUDIDManager.h; sourceTree = "<group>"; };
 		DD1427771C76C55C00B39324 /* ZKUDIDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKUDIDManager.m; sourceTree = "<group>"; };
-		DD54443C1C78BD93003CC33D /* KeychainAccessGroups.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = KeychainAccessGroups.plist; path = ../../KeychainAccessGroups.plist; sourceTree = "<group>"; };
+		DD54443E1C7AC7E8003CC33D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD54443F1C7AC7E8003CC33D /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +48,7 @@
 		DD1427521C76C30C00B39324 = {
 			isa = PBXGroup;
 			children = (
+				DD54443E1C7AC7E8003CC33D /* Security.framework */,
 				DD14275D1C76C30C00B39324 /* ZKUDIDManager */,
 				DD14275C1C76C30C00B39324 /* Products */,
 			);
@@ -88,7 +90,6 @@
 		DD1427751C76C52900B39324 /* ZKUDIDManager */ = {
 			isa = PBXGroup;
 			children = (
-				DD54443C1C78BD93003CC33D /* KeychainAccessGroups.plist */,
 				DD1427761C76C55C00B39324 /* ZKUDIDManager.h */,
 				DD1427771C76C55C00B39324 /* ZKUDIDManager.m */,
 			);
@@ -126,6 +127,7 @@
 				TargetAttributes = {
 					DD14275A1C76C30C00B39324 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = YY286Z2B45;
 					};
 				};
 			};
@@ -154,7 +156,6 @@
 			files = (
 				DD14276E1C76C30C00B39324 /* LaunchScreen.storyboard in Resources */,
 				DD14276B1C76C30C00B39324 /* Assets.xcassets in Resources */,
-				DD54443D1C78BD93003CC33D /* KeychainAccessGroups.plist in Resources */,
 				DD1427691C76C30C00B39324 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,7 +213,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: kai zhang (YA4K9PQDQF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: kai zhang (YA4K9PQDQF)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -234,6 +236,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "fd1bb7e9-6311-4b25-8630-7ab1a43882bf";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -256,7 +259,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: kai zhang (YA4K9PQDQF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -271,6 +275,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "fd1bb7e9-6311-4b25-8630-7ab1a43882bf";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -281,10 +286,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: kai zhang (YA4K9PQDQF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: kai zhang (YA4K9PQDQF)";
 				INFOPLIST_FILE = ZKUDIDManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mushank.ZKUDIDManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hengtiansoft.HTUDIDManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "fd1bb7e9-6311-4b25-8630-7ab1a43882bf";
 			};
 			name = Debug;
 		};
@@ -292,10 +300,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: kai zhang (YA4K9PQDQF)";
 				INFOPLIST_FILE = ZKUDIDManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mushank.ZKUDIDManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hengtiansoft.HTUDIDManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "fd1bb7e9-6311-4b25-8630-7ab1a43882bf";
 			};
 			name = Release;
 		};

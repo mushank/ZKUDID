@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ZKUDIDManager.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    // Example Code
+    NSString *UDID = [ZKUDIDManager value];
+    NSLog(@"%@",UDID);
+    
+    NSString *UUIDFVString = [[UIDevice currentDevice].identifierForVendor UUIDString];
+    NSLog(@"%@",UUIDFVString);
 }
 
 - (void)didReceiveMemoryWarning {
