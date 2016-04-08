@@ -3,7 +3,7 @@ Use identifierForVendor and keychain to make sure UDID(Unique Device Identifier)
 
 ## 1. Install
 ```
-pod 'ZKUDIDManager', '~> 1.0'
+pod 'ZKUDIDManager', '~> 1.0.1'
 ```
 
 ## 2. Usage
