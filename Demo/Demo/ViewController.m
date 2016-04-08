@@ -1,8 +1,8 @@
 //
 //  ViewController.m
-//  ZKUDIDManager
+//  Demo
 //
-//  Created by Jack on 2/19/16.
+//  Created by Jack on 3/28/16.
 //  Copyright © 2016 mushank. All rights reserved.
 //
 
@@ -21,10 +21,7 @@
     
     // Example Code
     NSString *UDID = [ZKUDIDManager value];
-    NSLog(@"%@",UDID);
-    
-    NSString *UUIDFVString = [[UIDevice currentDevice].identifierForVendor UUIDString];
-    NSLog(@"%@",UUIDFVString);
+    NSLog(@"UDID: %@",UDID);
 }
 
 - (void)didReceiveMemoryWarning {

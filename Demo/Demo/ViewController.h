@@ -1,8 +1,8 @@
 //
 //  ViewController.h
-//  ZKUDIDManager
+//  Demo
 //
-//  Created by Jack on 2/19/16.
+//  Created by Jack on 3/28/16.
 //  Copyright © 2016 mushank. All rights reserved.
 //
 

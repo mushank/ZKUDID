@@ -1,5 +1,5 @@
 # ZKUDIDManager
-Use 'identifierForVendor + keychain' to make sure UDID(Unique Device Identifier) consistency after App delete or reinstall.
+Use identifierForVendor and keychain to make sure UDID(Unique Device Identifier) consistency after App delete or reinstall.
 
 ## 1. How to use?
 It's so simple! Just like:
@@ -9,7 +9,7 @@ It's so simple! Just like:
 NSString* UIDIString = [ZKUDIDManager value];
 ```
 ## 2. Where is the source files?
-They are in the `ZKUDIDManager`folder:   
+They are in the `ZKUDIDManager` folder:   
 
 - `ZKUDIDManager.h`  
 - `ZKUDIDManager.m`  
