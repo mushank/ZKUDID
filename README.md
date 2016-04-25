@@ -1,10 +1,18 @@
 # ZKUDIDManager
-Use identifierForVendor and keychain to make sure UDID(Unique Device Identifier) consistency after App delete or reinstall.
+
+**Generate and manage persistent UDID(Unique Device Identifier) in iOS device.**
+
+***Use `IDFV(identifierForVendor)` + `keychain` to make sure UDID consistency, even if the App has been removed or reinstalled.***
+
+***A replacement for the deprecated mean of `OpenUDID`.***
 
 ## 1. Install
+
 ```
-pod 'ZKUDIDManager', '~> 1.0.1'
+pod 'ZKUDIDManager', '~> 1.0.2'
 ```
+
+*Noti: Requires iOS6.0 and later*
 
 ## 2. Usage
 It's so simple, just two lines of code:
