@@ -2,9 +2,9 @@
 
 **Generate and manage persistent UDID(Unique Device Identifier) in iOS device.**
 
-***Use `IDFV(identifierForVendor)` + `keychain` to make sure UDID consistency, even if the App has been removed or reinstalled.***
+*Use `IDFV(identifierForVendor)` + `keychain` to make sure UDID consistency, even if the App has been removed or reinstalled.*
 
-***A replacement for the deprecated mean of `OpenUDID`.***
+*A replacement for the deprecated mean of `OpenUDID`.*
 
 ## 1. Install
 
