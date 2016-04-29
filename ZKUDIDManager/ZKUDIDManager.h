@@ -30,9 +30,9 @@
 
 @interface ZKUDIDManager : NSObject
 
-///========================================================================
-///=== Usually, the method `+ (NSString *)value` is enough for you to use.
-///========================================================================
+///--------------------------------------------------------------------
+/// Usually, the method `+ (NSString *)value` is enough for you to use.
+///--------------------------------------------------------------------
 /**
  *  @method             value, Requires iOS6.0 and later
  *  @abstract           Obtain UDID(Unique Device Identity). If it already exits in keychain, return the exit one; otherwise generate a new one and store it into the keychain then return.
