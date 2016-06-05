@@ -36,16 +36,21 @@ static NSString *kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDManager"; 
 
 + (NSString *)value
 {
-    NSString *value = nil;
- 
-    NSData *itemData = [ZKUDIDManager selectKeychainItemWithIdentifier:kKeychainUDIDItemIdentifier serviceName:kKeychainUDIDItemServiceName];
-    if (itemData) {
-        value = [[NSString alloc]initWithData:itemData encoding:NSUTF8StringEncoding];
-    } else {
-        NSString *IDFVString = [ZKUDIDManager getIDFVString];
-        BOOL isInsertSuccess = [ZKUDIDManager insertKeychainItemWithValue:IDFVString identifier:kKeychainUDIDItemIdentifier serviceName:kKeychainUDIDItemServiceName];
-        if (isInsertSuccess) {
-            value = IDFVString;
+    static NSString* value;
+    if (!value) {
+        @synchronized ([self class]) {
+            if (!value) {
+                NSData *itemData = [ZKUDIDManager selectKeychainItemWithIdentifier:kKeychainUDIDItemIdentifier serviceName:kKeychainUDIDItemServiceName];
+                if (itemData) {
+                    value = [[NSString alloc]initWithData:itemData encoding:NSUTF8StringEncoding];
+                } else {
+                    NSString *IDFVString = [ZKUDIDManager getIDFVString];
+                    BOOL isInsertSuccess = [ZKUDIDManager insertKeychainItemWithValue:IDFVString identifier:kKeychainUDIDItemIdentifier serviceName:kKeychainUDIDItemServiceName];
+                    if (isInsertSuccess) {
+                        value = IDFVString;
+                    }
+                }            
+            }
         }
     }
     
