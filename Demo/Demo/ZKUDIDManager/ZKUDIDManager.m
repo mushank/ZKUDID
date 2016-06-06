@@ -28,28 +28,38 @@
 #import "ZKUDIDManager.h"
 #import <UIKit/UIKit.h>
 
+// ==================== ZKLog ====================
+#ifndef __OPTIMIZE__
+#define ZKLog(fmt, ...) NSLog((@"%s [Line %d]" fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define ZKLog(...) do{ }while(0)
+#endif /* __OPTIMIZE__ */
 
-static NSString *kKeychainUDIDItemIdentifier    = @"UDID";   /* Replace with your own UDID identifier */
-static NSString *kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDManager"; /* Replace with your own service name, usually you can use your App Bundle ID */
+static NSString * kUDIDValue = nil;
+
+static NSString * const kKeychainUDIDItemIdentifier    = @"UDID";   /* Replace with your own UDID identifier */
+static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDManager"; /* Replace with your own service name, usually you can use your App Bundle ID */
 
 @implementation ZKUDIDManager
 
 + (NSString *)value
 {
-    NSString *value = nil;
- 
-    NSData *itemData = [ZKUDIDManager selectKeychainItemWithIdentifier:kKeychainUDIDItemIdentifier serviceName:kKeychainUDIDItemServiceName];
-    if (itemData) {
-        value = [[NSString alloc]initWithData:itemData encoding:NSUTF8StringEncoding];
-    } else {
-        NSString *IDFVString = [ZKUDIDManager getIDFVString];
-        BOOL isInsertSuccess = [ZKUDIDManager insertKeychainItemWithValue:IDFVString identifier:kKeychainUDIDItemIdentifier serviceName:kKeychainUDIDItemServiceName];
-        if (isInsertSuccess) {
-            value = IDFVString;
+    if (kUDIDValue == nil) {
+        @synchronized ([self class]) {
+            NSData *itemData = [ZKUDIDManager selectKeychainItemWithIdentifier:kKeychainUDIDItemIdentifier serviceName:kKeychainUDIDItemServiceName];
+            if (itemData) {
+                kUDIDValue = [[NSString alloc]initWithData:itemData encoding:NSUTF8StringEncoding];
+            } else {
+                NSString *IDFVString = [ZKUDIDManager getIDFVString];
+                BOOL isInsertSuccess = [ZKUDIDManager insertKeychainItemWithValue:IDFVString identifier:kKeychainUDIDItemIdentifier serviceName:kKeychainUDIDItemServiceName];
+                if (isInsertSuccess) {
+                    kUDIDValue = IDFVString;
+                }
+            }
         }
     }
     
-    return value;
+    return kUDIDValue;
 }
 
 #pragma mark - Extension Method: Insert / Delete / Update / Select
@@ -76,9 +86,9 @@ static NSString *kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDManager"; 
     NSData *result = nil;
     OSStatus status = SecItemCopyMatching((CFDictionaryRef)dicForSelect, (void *)&result);
     if (status == errSecSuccess) {
-        NSLog(@"Select KeyChain Item Success with result: %@", [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding]);
+        ZKLog(@"Select KeyChain Item Success with result: %@", [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding]);
     } else {
-        NSLog(@"Select KeyChain Item Failure with errCode: %d", (int)status);
+        ZKLog(@"Select KeyChain Item Failure with errCode: %d", (int)status);
     }
     
     return result;
@@ -97,15 +107,17 @@ static NSString *kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDManager"; 
     NSData *dataForInsert = [value dataUsingEncoding:NSUTF8StringEncoding];
     [dicForInsert setObject:dataForInsert forKey:(id)kSecValueData];
     
+    BOOL isSucceeded;
     OSStatus status = SecItemAdd((CFDictionaryRef)dicForInsert, NULL);
     if (status == errSecSuccess) {
-        NSLog(@"Insert KeyChain Item Success with value: %@", value);
-        return YES;
+        ZKLog(@"Insert KeyChain Item Success with value: %@", value);
+        isSucceeded = YES;
     } else {
-        NSLog(@"Insert KeyChain Item Failure with errCode: %d", (int)status);
+        ZKLog(@"Insert KeyChain Item Failure with errCode: %d", (int)status);
+        isSucceeded = NO;
     }
     
-    return NO;
+    return isSucceeded;
 }
 
 /**
@@ -119,15 +131,17 @@ static NSString *kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDManager"; 
     NSData *dataForUpdate = [value dataUsingEncoding:NSUTF8StringEncoding];
     [dicForUpdate setObject:dataForUpdate forKey:(id)kSecValueData];
     
+    BOOL isSucceeded;
     OSStatus status = SecItemUpdate((CFDictionaryRef)dicForSelect, (CFDictionaryRef)dicForUpdate);
     if (status == errSecSuccess) {
-        NSLog(@"Update KeyChain Item Success with value: %@", value);
-        return YES;
+        ZKLog(@"Update KeyChain Item Success with value: %@", value);
+        isSucceeded = YES;
     } else {
-        NSLog(@"Update KeyChain Item Failure with errCode: %d", (int)status);
+        ZKLog(@"Update KeyChain Item Failure with errCode: %d", (int)status);
+        isSucceeded = NO;
     }
     
-    return NO;
+    return isSucceeded;
 }
 
 /**
@@ -137,15 +151,17 @@ static NSString *kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDManager"; 
 {
     NSMutableDictionary *dicForDelete = [self baseAttributeDictionary:identifier serviceName:serviceName];
     
+    BOOL isSucceeded;
     OSStatus status = SecItemDelete((CFDictionaryRef)dicForDelete);
     if (status == errSecSuccess) {
-        NSLog(@"Delete KeyChain Item Success with Identifier: %@ serviceName: %@", identifier, serviceName);
-        return YES;
+        ZKLog(@"Delete KeyChain Item Success with Identifier: %@ serviceName: %@", identifier, serviceName);
+        isSucceeded = YES;
     } else {
-        NSLog(@"Delete KeyChain Item Failure with errCode: %i", (int)status);
+        ZKLog(@"Delete KeyChain Item Failure with errCode: %i", (int)status);
+        isSucceeded = NO;
     }
     
-    return NO;
+    return isSucceeded;
 }
 
 #pragma mark - Private Method
