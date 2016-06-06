@@ -9,7 +9,7 @@
 ## 1. Install
 
 ```
-pod 'ZKUDIDManager', '~> 1.0.2'
+pod 'ZKUDIDManager', '~> 1.0.3'
 ```
 
 *Noti: Requires iOS6.0 and later*
