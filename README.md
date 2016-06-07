@@ -19,7 +19,7 @@ It's so simple, just two lines of code:
 
 ```
 #include "ZKUDIDManager.h"
-NSString* UIDIString = [ZKUDIDManager value];
+NSString *UIDIString = [ZKUDIDManager value];
 ```
 
 ## 3. Source files
