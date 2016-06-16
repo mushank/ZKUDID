@@ -28,12 +28,6 @@
 #import "ZKUDIDManager.h"
 #import <UIKit/UIKit.h>
 
-// ==================== ZKLog ====================
-#ifndef __OPTIMIZE__
-#define ZKLog(fmt, ...) NSLog((@"%s [Line %d]" fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
-#else
-#define ZKLog(...) do{ }while(0)
-#endif /* __OPTIMIZE__ */
 
 static NSString * kUDIDValue = nil;
 
@@ -86,9 +80,9 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
     NSData *result = nil;
     OSStatus status = SecItemCopyMatching((CFDictionaryRef)dicForSelect, (void *)&result);
     if (status == errSecSuccess) {
-        ZKLog(@"Select KeyChain Item Success with result: %@", [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding]);
+        // success
     } else {
-        ZKLog(@"Select KeyChain Item Failure with errCode: %d", (int)status);
+        // failure
     }
     
     return result;
@@ -110,10 +104,8 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
     BOOL isSucceeded;
     OSStatus status = SecItemAdd((CFDictionaryRef)dicForInsert, NULL);
     if (status == errSecSuccess) {
-        ZKLog(@"Insert KeyChain Item Success with value: %@", value);
         isSucceeded = YES;
     } else {
-        ZKLog(@"Insert KeyChain Item Failure with errCode: %d", (int)status);
         isSucceeded = NO;
     }
     
@@ -134,10 +126,8 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
     BOOL isSucceeded;
     OSStatus status = SecItemUpdate((CFDictionaryRef)dicForSelect, (CFDictionaryRef)dicForUpdate);
     if (status == errSecSuccess) {
-        ZKLog(@"Update KeyChain Item Success with value: %@", value);
         isSucceeded = YES;
     } else {
-        ZKLog(@"Update KeyChain Item Failure with errCode: %d", (int)status);
         isSucceeded = NO;
     }
     
@@ -154,10 +144,8 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
     BOOL isSucceeded;
     OSStatus status = SecItemDelete((CFDictionaryRef)dicForDelete);
     if (status == errSecSuccess) {
-        ZKLog(@"Delete KeyChain Item Success with Identifier: %@ serviceName: %@", identifier, serviceName);
         isSucceeded = YES;
     } else {
-        ZKLog(@"Delete KeyChain Item Failure with errCode: %i", (int)status);
         isSucceeded = NO;
     }
     
