@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name     = 'ZKUDIDManager'
-  s.version  = '1.0.4'
+  s.version  = '1.0.5'
   s.license  = 'MIT'
   s.summary  = 'Generate and manage persistent UDID(Unique Device Identifier) with IDFV(identifierForVendor) and keychain in iOS device.'
   s.homepage = 'https://github.com/mushank/ZKUDIDManager'
