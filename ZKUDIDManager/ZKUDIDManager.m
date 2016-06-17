@@ -159,6 +159,7 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
 + (NSString *)getIDFVString
 {
     NSString *IDFVString = [[UIDevice currentDevice].identifierForVendor UUIDString];
+    IDFVString = [IDFVString stringByReplacingOccurrencesOfString:@"-" withString:@""];
     
     return IDFVString;
 }
