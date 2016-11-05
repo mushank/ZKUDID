@@ -43,6 +43,12 @@
 + (NSString *)value;
 
 
+/**
+ * Set `YES` to open debug mode, defalut is `NO`
+ */
++ (void)setDebug:(BOOL)mode;
+
+
 #pragma mark - Extension Method: Insert / Delete / Update / Select
 /**
  *  @method             selectKeychainItemWithIdentifier: serviceName:
