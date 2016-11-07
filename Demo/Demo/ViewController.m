@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  Demo
+//  ZKUDIDManager
 //
 //  Created by Jack on 3/28/16.
 //  Copyright © 2016 mushank. All rights reserved.
@@ -20,6 +20,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     // Example Code
+    [ZKUDIDManager setDebug:YES];   // default is NO.
     NSString *UDID = [ZKUDIDManager value];
     NSLog(@"UDID: %@",UDID);
 }

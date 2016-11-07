@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046B78D31DCDED7200BBA571 /* ZKUDIDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 046B78D21DCDED7200BBA571 /* ZKUDIDManager.m */; };
 		DD99FF881CA97278005045C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD99FF871CA97278005045C4 /* main.m */; };
 		DD99FF8B1CA97278005045C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD99FF8A1CA97278005045C4 /* AppDelegate.m */; };
 		DD99FF8E1CA97278005045C4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD99FF8D1CA97278005045C4 /* ViewController.m */; };
 		DD99FF911CA97278005045C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD99FF8F1CA97278005045C4 /* Main.storyboard */; };
 		DD99FF931CA97278005045C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD99FF921CA97278005045C4 /* Assets.xcassets */; };
 		DD99FF961CA97278005045C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD99FF941CA97278005045C4 /* LaunchScreen.storyboard */; };
-		DD99FFA01CA9729A005045C4 /* ZKUDIDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD99FF9F1CA9729A005045C4 /* ZKUDIDManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		046B78D11DCDED7200BBA571 /* ZKUDIDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKUDIDManager.h; sourceTree = "<group>"; };
+		046B78D21DCDED7200BBA571 /* ZKUDIDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKUDIDManager.m; sourceTree = "<group>"; };
+		046B78D41DCDF4BA00BBA571 /* Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Demo.entitlements; sourceTree = "<group>"; };
 		DD99FF831CA97278005045C4 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD99FF871CA97278005045C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DD99FF891CA97278005045C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -27,8 +30,6 @@
 		DD99FF921CA97278005045C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD99FF951CA97278005045C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD99FF971CA97278005045C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD99FF9E1CA9729A005045C4 /* ZKUDIDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKUDIDManager.h; sourceTree = "<group>"; };
-		DD99FF9F1CA9729A005045C4 /* ZKUDIDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKUDIDManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +43,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		046B78D01DCDED7200BBA571 /* ZKUDIDManager */ = {
+			isa = PBXGroup;
+			children = (
+				046B78D11DCDED7200BBA571 /* ZKUDIDManager.h */,
+				046B78D21DCDED7200BBA571 /* ZKUDIDManager.m */,
+			);
+			name = ZKUDIDManager;
+			path = ../../ZKUDIDManager;
+			sourceTree = "<group>";
+		};
 		DD99FF7A1CA97278005045C4 = {
 			isa = PBXGroup;
 			children = (
@@ -66,7 +77,7 @@
 				DD99FF8C1CA97278005045C4 /* ViewController.h */,
 				DD99FF8D1CA97278005045C4 /* ViewController.m */,
 				DD99FF921CA97278005045C4 /* Assets.xcassets */,
-				DD99FF9D1CA9729A005045C4 /* ZKUDIDManager */,
+				046B78D01DCDED7200BBA571 /* ZKUDIDManager */,
 				DD99FF861CA97278005045C4 /* Supporting Files */,
 			);
 			path = Demo;
@@ -79,17 +90,9 @@
 				DD99FF941CA97278005045C4 /* LaunchScreen.storyboard */,
 				DD99FF871CA97278005045C4 /* main.m */,
 				DD99FF971CA97278005045C4 /* Info.plist */,
+				046B78D41DCDF4BA00BBA571 /* Demo.entitlements */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		DD99FF9D1CA9729A005045C4 /* ZKUDIDManager */ = {
-			isa = PBXGroup;
-			children = (
-				DD99FF9E1CA9729A005045C4 /* ZKUDIDManager.h */,
-				DD99FF9F1CA9729A005045C4 /* ZKUDIDManager.m */,
-			);
-			path = ZKUDIDManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,11 +121,17 @@
 		DD99FF7B1CA97278005045C4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = mushank;
 				TargetAttributes = {
 					DD99FF821CA97278005045C4 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = FE8QNZJ7C9;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -162,7 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD99FFA01CA9729A005045C4 /* ZKUDIDManager.m in Sources */,
+				046B78D31DCDED7200BBA571 /* ZKUDIDManager.m in Sources */,
 				DD99FF8E1CA97278005045C4 /* ViewController.m in Sources */,
 				DD99FF8B1CA97278005045C4 /* AppDelegate.m in Sources */,
 				DD99FF881CA97278005045C4 /* main.m in Sources */,
@@ -204,8 +213,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -227,7 +238,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -248,8 +259,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -265,7 +278,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -277,6 +290,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Demo/Demo.entitlements;
+				DEVELOPMENT_TEAM = FE8QNZJ7C9;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mushank.Demo;
@@ -288,6 +303,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Demo/Demo.entitlements;
+				DEVELOPMENT_TEAM = FE8QNZJ7C9;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mushank.Demo;
@@ -314,6 +331,7 @@
 				DD99FF9C1CA97278005045C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

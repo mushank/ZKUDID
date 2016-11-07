@@ -31,6 +31,8 @@
 
 static NSString * kUDIDValue = nil;
 
+static BOOL kDebugMode = NO;
+
 static NSString * const kKeychainUDIDItemIdentifier    = @"UDID";   /* Replace with your own UDID identifier */
 static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDManager"; /* Replace with your own service name, usually you can use your App Bundle ID */
 
@@ -55,6 +57,12 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
     
     return kUDIDValue;
 }
+
++ (void)setDebug:(BOOL)mode
+{
+    kDebugMode = mode ? YES : NO;
+}
+
 
 #pragma mark - Extension Method: Insert / Delete / Update / Select
 /**
@@ -83,6 +91,7 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
         // success
     } else {
         // failure
+        [self logAction:@"SecItemCopyMatching" status:status];
     }
     
     return result;
@@ -107,6 +116,7 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
         isSucceeded = YES;
     } else {
         isSucceeded = NO;
+        [self logAction:@"SecItemAdd" status:status];
     }
     
     return isSucceeded;
@@ -129,6 +139,7 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
         isSucceeded = YES;
     } else {
         isSucceeded = NO;
+        [self logAction:@"SecItemUpdate" status:status];
     }
     
     return isSucceeded;
@@ -147,6 +158,7 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
         isSucceeded = YES;
     } else {
         isSucceeded = NO;
+        [self logAction:@"SecItemDelete" status:status];
     }
     
     return isSucceeded;
@@ -191,5 +203,11 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
     return baseAttributeDictionary;
 }
 
++ (void)logAction:(NSString *)action status:(OSStatus)status
+{
+    if (kDebugMode) {
+        NSLog(@"%@ Error Occurred: `[KeychainAction: %@], [OSStatus: %d]`", NSStringFromClass(self.class), action ,status);
+    }
+}
 
 @end

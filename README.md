@@ -1,6 +1,6 @@
 # ZKUDIDManager
 
-**Generate and manage persistent UDID(Unique Device Identifier) in iOS device.**
+**Generate and save permanent UDID with IDFV and keychain in iOS device.**
 
 *Use `IDFV(identifierForVendor)` + `keychain` to make sure UDID consistency, even if the App has been removed or reinstalled.*
 
@@ -9,7 +9,7 @@
 ## 1. Install
 
 ```
-pod 'ZKUDIDManager', '~> 1.0.5'
+pod 'ZKUDIDManager', '~> 1.0.7'
 ```
 
 *Noti: Requires iOS6.0 and later*
@@ -22,7 +22,10 @@ It's so simple, just two lines of code:
 NSString *UIDIString = [ZKUDIDManager value];
 ```
 
+⚠️***Attention:*** *If you get the value `(null)`, please check your `KeyChain Entitlemen` setting: Go to project settings->Capabilities->Keychain Sharing->Add Keychain Groups+Turn On*. It usually happens in iOS 10.
+
 ## 3. Source files
+
 They are in the `ZKUDIDManager` folder:   
 
 - `ZKUDIDManager.h`  
