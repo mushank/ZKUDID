@@ -1,12 +1,15 @@
 # ZKUDIDManager
 
+[![](https://img.shields.io/badge/Pod-1.0.7-blue.svg)](http://cocoapods.org/?q=ZKUDIDManager) [![](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)](http://www.apple.com/ios)  [![License MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://github.com/mushank/ZKUDIDManager/blob/master/LICENSE)
+
+
 **Generate and save permanent UDID with IDFV and keychain in iOS device.**
 
 *Use `IDFV(identifierForVendor)` + `keychain` to make sure UDID consistency, even if the App has been removed or reinstalled.*
 
 *A replacement for the deprecated mean of `OpenUDID`.*
 
-## 1. Install
+## Install
 
 ```
 pod 'ZKUDIDManager', '~> 1.0.7'
@@ -14,7 +17,7 @@ pod 'ZKUDIDManager', '~> 1.0.7'
 
 *Noti: Requires iOS6.0 and later*
 
-## 2. Usage
+## Usage
 It's so simple, just two lines of code:
 
 ```
@@ -24,7 +27,7 @@ NSString *UIDIString = [ZKUDIDManager value];
 
 ⚠️***Attention:*** *If you get the value `(null)`, please check your `KeyChain Entitlemen` setting: Go to project settings->Capabilities->Keychain Sharing->Add Keychain Groups+Turn On*. It usually happens in iOS 10.
 
-## 3. Source files
+## Source files
 
 They are in the `ZKUDIDManager` folder:   
 
@@ -33,3 +36,6 @@ They are in the `ZKUDIDManager` folder:
 
 Now, enjoy yourself!
 
+## License
+
+ZKUDIDManager is released under [MIT License](https://github.com/mushank/ZKUDIDManager/blob/master/LICENSE).
