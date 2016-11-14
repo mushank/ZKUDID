@@ -1,6 +1,6 @@
 # ZKUDIDManager
 
-[![](https://img.shields.io/badge/Pod-1.0.7-blue.svg)](http://cocoapods.org/?q=ZKUDIDManager) [![](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)](http://www.apple.com/ios)  [![License MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://github.com/mushank/ZKUDIDManager/blob/master/LICENSE)
+[![](https://travis-ci.org/mushank/ZKUDIDManager.svg?branch=master)](https://travis-ci.org/mushank/ZKUDIDManager) [![](https://img.shields.io/badge/pod-1.0.7-blue.svg)](http://cocoapods.org/?q=ZKUDIDManager) [![](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](http://www.apple.com/ios)  [![License MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/mushank/ZKUDIDManager/blob/master/LICENSE)
 
 
 **Generate and save permanent UDID with IDFV and keychain in iOS device.**

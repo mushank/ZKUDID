@@ -3,4 +3,4 @@ xcode_project: Demo/Demo.xcodeproj
 xcode_scheme: Demo
 
 script:
-	xcodebuild -project Demo/Demo.xcodeproj -scheme Demo -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+- xctool -project Demo/Demo.xcodeproj -scheme Demo build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
