@@ -1,6 +1,6 @@
 # ZKUDIDManager
 
-[![](https://travis-ci.org/mushank/ZKUDIDManager.svg?branch=master)](https://travis-ci.org/mushank/ZKUDIDManager) [![](https://img.shields.io/badge/pod-1.0.7-blue.svg)](http://cocoapods.org/?q=ZKUDIDManager) [![](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](http://www.apple.com/ios)  [![License MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/mushank/ZKUDIDManager/blob/master/LICENSE)
+[![Travis-CI](https://travis-ci.org/mushank/ZKUDIDManager.svg?branch=master)](https://travis-ci.org/mushank/ZKUDIDManager) [![Carthage](https://img.shields.io/badge/carthage-compatible-green.svg)](https://github.com/Carthage/Carthage) [![CocoaPods](https://img.shields.io/badge/pod-1.0.8-green.svg)](http://cocoapods.org/?q=ZKUDIDManager) [![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](http://www.apple.com/ios) [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/mushank/ZKUDIDManager/blob/master/LICENSE)
 
 
 **Generate and save permanent UDID with IDFV and keychain in iOS device.**
@@ -11,11 +11,23 @@
 
 ## Install
 
+#### CocoaPods
+
+Available through [CocoaPods](http://cocoapods.org/), simply add the following line to your Podfile:
+
 ```
-pod 'ZKUDIDManager', '~> 1.0.7'
+pod 'ZKUDIDManager', '~> 1.0'
 ```
 
-*Noti: Requires iOS6.0 and later*
+#### Carthage
+
+Available through [Carthage](https://github.com/Carthage/Carthage), simply add the following line to your Cartfile:
+
+```
+github "mushank/ZKUDIDManager" ~> 1.0
+```
+
+*Noti: Requires iOS 6.0 or later*
 
 ## Usage
 It's so simple, just two lines of code:

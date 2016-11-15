@@ -1,6 +1,6 @@
 //
 //  main.m
-//  ZKUDIDManager
+//  Demo
 //
 //  Created by Jack on 3/28/16.
 //  Copyright © 2016 mushank. All rights reserved.

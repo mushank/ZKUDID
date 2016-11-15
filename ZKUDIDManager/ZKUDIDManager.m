@@ -30,9 +30,7 @@
 
 
 static NSString * kUDIDValue = nil;
-
 static BOOL kDebugMode = NO;
-
 static NSString * const kKeychainUDIDItemIdentifier    = @"UDID";   /* Replace with your own UDID identifier */
 static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDManager"; /* Replace with your own service name, usually you can use your App Bundle ID */
 
@@ -91,7 +89,7 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
         // success
     } else {
         // failure
-        [self logAction:@"SecItemCopyMatching" status:status];
+        [self logAction:@"SecItemCopyMatching" status:(NSInteger)status];
     }
     
     return result;
@@ -116,7 +114,7 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
         isSucceeded = YES;
     } else {
         isSucceeded = NO;
-        [self logAction:@"SecItemAdd" status:status];
+        [self logAction:@"SecItemAdd" status:(NSInteger)status];
     }
     
     return isSucceeded;
@@ -139,7 +137,7 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
         isSucceeded = YES;
     } else {
         isSucceeded = NO;
-        [self logAction:@"SecItemUpdate" status:status];
+        [self logAction:@"SecItemUpdate" status:(NSInteger)status];
     }
     
     return isSucceeded;
@@ -158,7 +156,7 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
         isSucceeded = YES;
     } else {
         isSucceeded = NO;
-        [self logAction:@"SecItemDelete" status:status];
+        [self logAction:@"SecItemDelete" status:(NSInteger)status];
     }
     
     return isSucceeded;
@@ -171,7 +169,6 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
 + (NSString *)getIDFVString
 {
     NSString *IDFVString = [[UIDevice currentDevice].identifierForVendor UUIDString];
-    IDFVString = [IDFVString stringByReplacingOccurrencesOfString:@"-" withString:@""];
     
     return IDFVString;
 }
@@ -203,10 +200,10 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
     return baseAttributeDictionary;
 }
 
-+ (void)logAction:(NSString *)action status:(OSStatus)status
++ (void)logAction:(NSString *)action status:(NSInteger)status
 {
     if (kDebugMode) {
-        NSLog(@"%@ Error Occurred: `[KeychainAction: %@], [OSStatus: %d]`", NSStringFromClass(self.class), action ,status);
+        NSLog(@"%@ Error Occurred: `[KeychainAction: %@], [OSStatus: %ld]`", NSStringFromClass(self.class), action ,(long)status);
     }
 }
 
