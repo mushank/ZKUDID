@@ -36,19 +36,16 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
 
 @implementation ZKUDIDManager
 
-+ (NSString *)value
-{
++ (NSString *)value {
     if (kUDIDValue == nil) {
         @synchronized ([self class]) {
-            NSData *itemData = [ZKUDIDManager selectKeychainItemWithIdentifier:kKeychainUDIDItemIdentifier serviceName:kKeychainUDIDItemServiceName];
+            NSData *itemData = [self selectKeychainItemWithIdentifier:kKeychainUDIDItemIdentifier serviceName:kKeychainUDIDItemServiceName];
             if (itemData) {
                 kUDIDValue = [[NSString alloc]initWithData:itemData encoding:NSUTF8StringEncoding];
             } else {
-                NSString *IDFVString = [ZKUDIDManager getIDFVString];
-                BOOL isInsertSuccess = [ZKUDIDManager insertKeychainItemWithValue:IDFVString identifier:kKeychainUDIDItemIdentifier serviceName:kKeychainUDIDItemServiceName];
-                if (isInsertSuccess) {
-                    kUDIDValue = IDFVString;
-                }
+                NSString *IDFVString = [self getIDFVString];
+                [self insertKeychainItemWithValue:IDFVString identifier:kKeychainUDIDItemIdentifier serviceName:kKeychainUDIDItemServiceName];
+                kUDIDValue = IDFVString;
             }
         }
     }
@@ -56,8 +53,7 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
     return kUDIDValue;
 }
 
-+ (void)setDebug:(BOOL)mode
-{
++ (void)setDebug:(BOOL)mode {
     kDebugMode = mode ? YES : NO;
 }
 
@@ -66,8 +62,7 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
 /**
  *  To find out if our UDID string already exists in the keychain (and what the value of the UDID string is), we use the `SecItemCopyMatching` function.
  */
-+ (NSData *)selectKeychainItemWithIdentifier:(NSString *)identifier serviceName:(NSString *)serviceName
-{
++ (NSData *)selectKeychainItemWithIdentifier:(NSString *)identifier serviceName:(NSString *)serviceName {
     NSMutableDictionary *dicForSelect = [self baseAttributeDictionary:identifier serviceName:serviceName];
     
     /**
@@ -98,8 +93,7 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
 /**
  *  Inserting an keychain item is almost the same as the select function except that we need to set the value of the UDID string which we want to store. We use the `SecItemAdd` function.
  */
-+ (BOOL)insertKeychainItemWithValue:(NSString *)value identifier:(NSString *)identifier serviceName:(NSString *)serviceName
-{
++ (BOOL)insertKeychainItemWithValue:(NSString *)value identifier:(NSString *)identifier serviceName:(NSString *)serviceName {
     NSMutableDictionary *dicForInsert = [self baseAttributeDictionary:identifier serviceName:serviceName];
     
     /**
@@ -123,8 +117,7 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
 /**
  *  Updating a keychain item is similar to inserting an item except that a separate dictionary is used to contain the attributes to be updated. We use the `SecItemUpdate` function.
  */
-+ (BOOL)updateKeychainItemWithValue:(NSString *)value identifier:(NSString *)identifier serviceName:(NSString *)serviceName
-{
++ (BOOL)updateKeychainItemWithValue:(NSString *)value identifier:(NSString *)identifier serviceName:(NSString *)serviceName {
     NSMutableDictionary *dicForSelect = [self baseAttributeDictionary:identifier serviceName:serviceName];
     
     NSMutableDictionary *dicForUpdate = [[NSMutableDictionary alloc]init];
@@ -146,8 +139,7 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
 /**
  *  To delete an item from the keychain, we use the `SecItemDelete` function.
  */
-+ (BOOL)deleteKeychainItemWithIdentifier:(NSString *)identifier serviceName:(NSString *)serviceName
-{
++ (BOOL)deleteKeychainItemWithIdentifier:(NSString *)identifier serviceName:(NSString *)serviceName {
     NSMutableDictionary *dicForDelete = [self baseAttributeDictionary:identifier serviceName:serviceName];
     
     BOOL isSucceeded;
@@ -166,18 +158,14 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
 /**
  *  get identifierForVendor String
  */
-+ (NSString *)getIDFVString
-{
-    NSString *IDFVString = [[UIDevice currentDevice].identifierForVendor UUIDString];
-    
-    return IDFVString;
++ (NSString *)getIDFVString {
+    return [[UIDevice currentDevice].identifierForVendor UUIDString];
 }
 
 /**
  *  This function allocates and constructs a dictionary which defines the attributes of the keychain item you want to insert, delete, update or select.
  */
-+ (NSMutableDictionary *)baseAttributeDictionary:(NSString *)identifier serviceName:(NSString *)serviceName
-{
++ (NSMutableDictionary *)baseAttributeDictionary:(NSString *)identifier serviceName:(NSString *)serviceName {
     NSMutableDictionary *baseAttributeDictionary = [[NSMutableDictionary alloc] init];
     
     /**
@@ -200,8 +188,7 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
     return baseAttributeDictionary;
 }
 
-+ (void)logAction:(NSString *)action status:(NSInteger)status
-{
++ (void)logAction:(NSString *)action status:(NSInteger)status {
     if (kDebugMode) {
         NSLog(@"%@ Executed: `[KeychainAction: %@], [OSStatus: %ld]`", NSStringFromClass(self.class), action ,(long)status);
     }
