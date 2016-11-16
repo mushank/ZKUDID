@@ -89,8 +89,8 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
         // success
     } else {
         // failure
-        [self logAction:@"SecItemCopyMatching" status:(NSInteger)status];
     }
+    [self logAction:@"SecItemCopyMatching" status:(NSInteger)status];
     
     return result;
 }
@@ -114,9 +114,9 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
         isSucceeded = YES;
     } else {
         isSucceeded = NO;
-        [self logAction:@"SecItemAdd" status:(NSInteger)status];
     }
-    
+    [self logAction:@"SecItemAdd" status:(NSInteger)status];
+
     return isSucceeded;
 }
 
@@ -137,9 +137,9 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
         isSucceeded = YES;
     } else {
         isSucceeded = NO;
-        [self logAction:@"SecItemUpdate" status:(NSInteger)status];
     }
-    
+    [self logAction:@"SecItemUpdate" status:(NSInteger)status];
+
     return isSucceeded;
 }
 
@@ -156,9 +156,9 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
         isSucceeded = YES;
     } else {
         isSucceeded = NO;
-        [self logAction:@"SecItemDelete" status:(NSInteger)status];
     }
-    
+    [self logAction:@"SecItemDelete" status:(NSInteger)status];
+
     return isSucceeded;
 }
 
@@ -203,7 +203,7 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
 + (void)logAction:(NSString *)action status:(NSInteger)status
 {
     if (kDebugMode) {
-        NSLog(@"%@ Error Occurred: `[KeychainAction: %@], [OSStatus: %ld]`", NSStringFromClass(self.class), action ,(long)status);
+        NSLog(@"%@ Executed: `[KeychainAction: %@], [OSStatus: %ld]`", NSStringFromClass(self.class), action ,(long)status);
     }
 }
 
