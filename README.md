@@ -34,7 +34,7 @@ It's so simple, just two lines of code:
 
 ```
 #include "ZKUDIDManager.h"
-NSString *UIDIString = [ZKUDIDManager value];
+NSString *UDIDString = [ZKUDIDManager value];
 ```
 
 ⚠️***Attention:*** *If you get the value `(null)`, please check your `KeyChain Entitlemen` setting: Go to project settings->Capabilities->Keychain Sharing->Add Keychain Groups+Turn On*. It usually happens in iOS 10.
