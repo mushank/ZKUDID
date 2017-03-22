@@ -28,11 +28,10 @@
 #import "ZKUDIDManager.h"
 #import <UIKit/UIKit.h>
 
-
-static NSString * kUDIDValue = nil;
-static BOOL kDebugMode = NO;
-static NSString * const kKeychainUDIDItemIdentifier    = @"UDID";   /* Replace with your own UDID identifier */
-static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDManager"; /* Replace with your own service name, usually you can use your App Bundle ID */
+static BOOL kDebugMode  = NO;
+static NSString *kUDIDValue = nil;
+static NSString *const kKeychainUDIDItemIdentifier  = @"UDID";   /* Replace with your own UDID identifier */
+static NSString *const kKeychainUDIDItemServiceName = @"com.mushank.ZKUDIDManager"; /* Replace with your own service name, usually you can use your App Bundle ID */
 
 @implementation ZKUDIDManager
 
@@ -43,18 +42,17 @@ static NSString * const kKeychainUDIDItemServiceName   = @"com.mushank.ZKUDIDMan
             if (itemData) {
                 kUDIDValue = [[NSString alloc]initWithData:itemData encoding:NSUTF8StringEncoding];
             } else {
-                NSString *IDFVString = [self getIDFVString];
-                [self insertKeychainItemWithValue:IDFVString identifier:kKeychainUDIDItemIdentifier serviceName:kKeychainUDIDItemServiceName];
-                kUDIDValue = IDFVString;
+                kUDIDValue = [self getIDFVString];
+                [self insertKeychainItemWithValue:kUDIDValue identifier:kKeychainUDIDItemIdentifier serviceName:kKeychainUDIDItemServiceName];
             }
         }
     }
-    
+
     return kUDIDValue;
 }
 
 + (void)setDebug:(BOOL)mode {
-    kDebugMode = mode ? YES : NO;
+    kDebugMode = mode;
 }
 
 
