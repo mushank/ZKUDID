@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		043C38691E9B26F900531954 /* ZKUDID.h in Headers */ = {isa = PBXBuildFile; fileRef = 043C38671E9B26F900531954 /* ZKUDID.h */; };
+		043C38691E9B26F900531954 /* ZKUDID.h in Headers */ = {isa = PBXBuildFile; fileRef = 043C38671E9B26F900531954 /* ZKUDID.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		043C386A1E9B26F900531954 /* ZKUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 043C38681E9B26F900531954 /* ZKUDID.m */; };
 /* End PBXBuildFile section */
 
