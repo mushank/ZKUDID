@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0810"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "04BDFF371DDB0DCB00B8FBDE"
-               BuildableName = "ZKUDIDManager.framework"
-               BlueprintName = "ZKUDIDManager"
-               ReferencedContainer = "container:ZKUDIDManager.xcodeproj">
+               BlueprintIdentifier = "041B7A2A1E97A06600C1E135"
+               BuildableName = "ZKUDID.framework"
+               BlueprintName = "ZKUDID"
+               ReferencedContainer = "container:ZKUDID.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,10 +45,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "04BDFF371DDB0DCB00B8FBDE"
-            BuildableName = "ZKUDIDManager.framework"
-            BlueprintName = "ZKUDIDManager"
-            ReferencedContainer = "container:ZKUDIDManager.xcodeproj">
+            BlueprintIdentifier = "041B7A2A1E97A06600C1E135"
+            BuildableName = "ZKUDID.framework"
+            BlueprintName = "ZKUDID"
+            ReferencedContainer = "container:ZKUDID.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -63,10 +63,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "04BDFF371DDB0DCB00B8FBDE"
-            BuildableName = "ZKUDIDManager.framework"
-            BlueprintName = "ZKUDIDManager"
-            ReferencedContainer = "container:ZKUDIDManager.xcodeproj">
+            BlueprintIdentifier = "041B7A2A1E97A06600C1E135"
+            BuildableName = "ZKUDID.framework"
+            BlueprintName = "ZKUDID"
+            ReferencedContainer = "container:ZKUDID.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

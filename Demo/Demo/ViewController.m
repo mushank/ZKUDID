@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "ZKUDIDManager.h"
+#import "ZKUDID.h"
 
 @interface ViewController ()
 
@@ -20,8 +20,8 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     // Example Code
-    [ZKUDIDManager setDebug:YES];   // default is NO.
-    NSString *UDID = [ZKUDIDManager value];
+    [ZKUDID setDebug:YES];   // default is NO.
+    NSString *UDID = [ZKUDID value];
     NSLog(@"UDID: %@",UDID);
 }
 

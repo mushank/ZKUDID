@@ -1,8 +1,8 @@
 //
-//  ZKUDIDManager.h
-//  ZKUDIDManager
+//  ZKUDID.h
+//  ZKUDID
 //
-//  https://github.com/mushank/ZKUDIDManager
+//  https://github.com/mushank/ZKUDID
 //
 //  Created by Jack on 2/19/16.
 //  Copyright © 2016 mushank. All rights reserved.
@@ -28,7 +28,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface ZKUDIDManager : NSObject
+@interface ZKUDID : NSObject
 
 ///--------------------------------------------------------------------
 /// Usually, the method `+ (NSString *)value` is enough for you to use.

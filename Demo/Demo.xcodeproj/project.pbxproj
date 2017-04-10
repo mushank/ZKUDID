@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		046B78D31DCDED7200BBA571 /* ZKUDIDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 046B78D21DCDED7200BBA571 /* ZKUDIDManager.m */; };
+		041B7A201E97973100C1E135 /* ZKUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 041B7A1F1E97973100C1E135 /* ZKUDID.m */; };
 		DD99FF881CA97278005045C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD99FF871CA97278005045C4 /* main.m */; };
 		DD99FF8B1CA97278005045C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD99FF8A1CA97278005045C4 /* AppDelegate.m */; };
 		DD99FF8E1CA97278005045C4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD99FF8D1CA97278005045C4 /* ViewController.m */; };
@@ -17,8 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		046B78D11DCDED7200BBA571 /* ZKUDIDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKUDIDManager.h; sourceTree = "<group>"; };
-		046B78D21DCDED7200BBA571 /* ZKUDIDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKUDIDManager.m; sourceTree = "<group>"; };
+		041B7A1E1E97973100C1E135 /* ZKUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKUDID.h; sourceTree = "<group>"; };
+		041B7A1F1E97973100C1E135 /* ZKUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKUDID.m; sourceTree = "<group>"; };
 		046B78D41DCDF4BA00BBA571 /* Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Demo.entitlements; sourceTree = "<group>"; };
 		DD99FF831CA97278005045C4 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD99FF871CA97278005045C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -43,14 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		046B78D01DCDED7200BBA571 /* ZKUDIDManager */ = {
+		041B7A1D1E97973100C1E135 /* ZKUDID */ = {
 			isa = PBXGroup;
 			children = (
-				046B78D11DCDED7200BBA571 /* ZKUDIDManager.h */,
-				046B78D21DCDED7200BBA571 /* ZKUDIDManager.m */,
+				041B7A1E1E97973100C1E135 /* ZKUDID.h */,
+				041B7A1F1E97973100C1E135 /* ZKUDID.m */,
 			);
-			name = ZKUDIDManager;
-			path = ../../ZKUDIDManager;
+			name = ZKUDID;
+			path = ../../ZKUDID;
 			sourceTree = "<group>";
 		};
 		DD99FF7A1CA97278005045C4 = {
@@ -76,8 +76,8 @@
 				DD99FF8A1CA97278005045C4 /* AppDelegate.m */,
 				DD99FF8C1CA97278005045C4 /* ViewController.h */,
 				DD99FF8D1CA97278005045C4 /* ViewController.m */,
+				041B7A1D1E97973100C1E135 /* ZKUDID */,
 				DD99FF921CA97278005045C4 /* Assets.xcassets */,
-				046B78D01DCDED7200BBA571 /* ZKUDIDManager */,
 				DD99FF861CA97278005045C4 /* Supporting Files */,
 			);
 			path = Demo;
@@ -171,9 +171,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				046B78D31DCDED7200BBA571 /* ZKUDIDManager.m in Sources */,
 				DD99FF8E1CA97278005045C4 /* ViewController.m in Sources */,
 				DD99FF8B1CA97278005045C4 /* AppDelegate.m in Sources */,
+				041B7A201E97973100C1E135 /* ZKUDID.m in Sources */,
 				DD99FF881CA97278005045C4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

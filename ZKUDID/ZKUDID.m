@@ -1,8 +1,8 @@
 //
-//  ZKUDIDManager.m
-//  ZKUDIDManager
+//  ZKUDID.m
+//  ZKUDID
 //
-//  https://github.com/mushank/ZKUDIDManager
+//  https://github.com/mushank/ZKUDID
 //
 //  Created by Jack on 2/19/16.
 //  Copyright © 2016 mushank. All rights reserved.
@@ -25,15 +25,15 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-#import "ZKUDIDManager.h"
+#import "ZKUDID.h"
 #import <UIKit/UIKit.h>
 
 static BOOL kDebugMode  = NO;
 static NSString *kUDIDValue = nil;
 static NSString *const kKeychainUDIDItemIdentifier  = @"UDID";   /* Replace with your own UDID identifier */
-static NSString *const kKeychainUDIDItemServiceName = @"com.mushank.ZKUDIDManager"; /* Replace with your own service name, usually you can use your App Bundle ID */
+static NSString *const kKeychainUDIDItemServiceName = @"com.mushank.ZKUDID"; /* Replace with your own service name, usually you can use your App Bundle ID */
 
-@implementation ZKUDIDManager
+@implementation ZKUDID
 
 + (NSString *)value {
     if (kUDIDValue == nil) {

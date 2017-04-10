@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		047AFD041DDB23FE008752C1 /* ZKUDIDManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 047AFD021DDB23FE008752C1 /* ZKUDIDManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		047AFD051DDB23FE008752C1 /* ZKUDIDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 047AFD031DDB23FE008752C1 /* ZKUDIDManager.m */; };
+		043C38691E9B26F900531954 /* ZKUDID.h in Headers */ = {isa = PBXBuildFile; fileRef = 043C38671E9B26F900531954 /* ZKUDID.h */; };
+		043C386A1E9B26F900531954 /* ZKUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 043C38681E9B26F900531954 /* ZKUDID.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		047AFD021DDB23FE008752C1 /* ZKUDIDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKUDIDManager.h; sourceTree = "<group>"; };
-		047AFD031DDB23FE008752C1 /* ZKUDIDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKUDIDManager.m; sourceTree = "<group>"; };
-		04BDFF381DDB0DCB00B8FBDE /* ZKUDIDManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZKUDIDManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		04BDFF3C1DDB0DCB00B8FBDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		041B7A2B1E97A06600C1E135 /* ZKUDID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZKUDID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		041B7A2F1E97A06600C1E135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		043C38671E9B26F900531954 /* ZKUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKUDID.h; sourceTree = "<group>"; };
+		043C38681E9B26F900531954 /* ZKUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKUDID.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		04BDFF341DDB0DCB00B8FBDE /* Frameworks */ = {
+		041B7A271E97A06600C1E135 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,107 +29,107 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		047AFD011DDB23FE008752C1 /* ZKUDIDManager */ = {
+		041B7A211E97A06600C1E135 = {
 			isa = PBXGroup;
 			children = (
-				047AFD021DDB23FE008752C1 /* ZKUDIDManager.h */,
-				047AFD031DDB23FE008752C1 /* ZKUDIDManager.m */,
-			);
-			name = ZKUDIDManager;
-			path = ../../ZKUDIDManager;
-			sourceTree = "<group>";
-		};
-		04BDFF2E1DDB0DCB00B8FBDE = {
-			isa = PBXGroup;
-			children = (
-				04BDFF3A1DDB0DCB00B8FBDE /* ZKUDIDManager */,
-				04BDFF391DDB0DCB00B8FBDE /* Products */,
+				041B7A2D1E97A06600C1E135 /* ZKUDID */,
+				041B7A2C1E97A06600C1E135 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		04BDFF391DDB0DCB00B8FBDE /* Products */ = {
+		041B7A2C1E97A06600C1E135 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				04BDFF381DDB0DCB00B8FBDE /* ZKUDIDManager.framework */,
+				041B7A2B1E97A06600C1E135 /* ZKUDID.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		04BDFF3A1DDB0DCB00B8FBDE /* ZKUDIDManager */ = {
+		041B7A2D1E97A06600C1E135 /* ZKUDID */ = {
 			isa = PBXGroup;
 			children = (
-				047AFD011DDB23FE008752C1 /* ZKUDIDManager */,
-				04BDFF3C1DDB0DCB00B8FBDE /* Info.plist */,
+				043C38661E9B26F900531954 /* ZKUDID */,
+				041B7A2F1E97A06600C1E135 /* Info.plist */,
 			);
-			path = ZKUDIDManager;
+			path = ZKUDID;
+			sourceTree = "<group>";
+		};
+		043C38661E9B26F900531954 /* ZKUDID */ = {
+			isa = PBXGroup;
+			children = (
+				043C38671E9B26F900531954 /* ZKUDID.h */,
+				043C38681E9B26F900531954 /* ZKUDID.m */,
+			);
+			name = ZKUDID;
+			path = ../../ZKUDID;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		04BDFF351DDB0DCB00B8FBDE /* Headers */ = {
+		041B7A281E97A06600C1E135 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				047AFD041DDB23FE008752C1 /* ZKUDIDManager.h in Headers */,
+				043C38691E9B26F900531954 /* ZKUDID.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		04BDFF371DDB0DCB00B8FBDE /* ZKUDIDManager */ = {
+		041B7A2A1E97A06600C1E135 /* ZKUDID */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04BDFF401DDB0DCB00B8FBDE /* Build configuration list for PBXNativeTarget "ZKUDIDManager" */;
+			buildConfigurationList = 041B7A331E97A06600C1E135 /* Build configuration list for PBXNativeTarget "ZKUDID" */;
 			buildPhases = (
-				04BDFF331DDB0DCB00B8FBDE /* Sources */,
-				04BDFF341DDB0DCB00B8FBDE /* Frameworks */,
-				04BDFF351DDB0DCB00B8FBDE /* Headers */,
-				04BDFF361DDB0DCB00B8FBDE /* Resources */,
+				041B7A261E97A06600C1E135 /* Sources */,
+				041B7A271E97A06600C1E135 /* Frameworks */,
+				041B7A281E97A06600C1E135 /* Headers */,
+				041B7A291E97A06600C1E135 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ZKUDIDManager;
-			productName = ZKUDIDManager;
-			productReference = 04BDFF381DDB0DCB00B8FBDE /* ZKUDIDManager.framework */;
+			name = ZKUDID;
+			productName = ZKUDID;
+			productReference = 041B7A2B1E97A06600C1E135 /* ZKUDID.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		04BDFF2F1DDB0DCB00B8FBDE /* Project object */ = {
+		041B7A221E97A06600C1E135 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = mushank;
 				TargetAttributes = {
-					04BDFF371DDB0DCB00B8FBDE = {
-						CreatedOnToolsVersion = 8.1;
+					041B7A2A1E97A06600C1E135 = {
+						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 04BDFF321DDB0DCB00B8FBDE /* Build configuration list for PBXProject "ZKUDIDManager" */;
+			buildConfigurationList = 041B7A251E97A06600C1E135 /* Build configuration list for PBXProject "ZKUDID" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 04BDFF2E1DDB0DCB00B8FBDE;
-			productRefGroup = 04BDFF391DDB0DCB00B8FBDE /* Products */;
+			mainGroup = 041B7A211E97A06600C1E135;
+			productRefGroup = 041B7A2C1E97A06600C1E135 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				04BDFF371DDB0DCB00B8FBDE /* ZKUDIDManager */,
+				041B7A2A1E97A06600C1E135 /* ZKUDID */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		04BDFF361DDB0DCB00B8FBDE /* Resources */ = {
+		041B7A291E97A06600C1E135 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -139,18 +139,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		04BDFF331DDB0DCB00B8FBDE /* Sources */ = {
+		041B7A261E97A06600C1E135 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				047AFD051DDB23FE008752C1 /* ZKUDIDManager.m in Sources */,
+				043C386A1E9B26F900531954 /* ZKUDID.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		04BDFF3E1DDB0DCB00B8FBDE /* Debug */ = {
+		041B7A311E97A06600C1E135 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -168,7 +168,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -191,7 +191,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -201,7 +201,7 @@
 			};
 			name = Debug;
 		};
-		04BDFF3F1DDB0DCB00B8FBDE /* Release */ = {
+		041B7A321E97A06600C1E135 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -219,7 +219,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -236,7 +236,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -246,7 +246,7 @@
 			};
 			name = Release;
 		};
-		04BDFF411DDB0DCB00B8FBDE /* Debug */ = {
+		041B7A341E97A06600C1E135 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
@@ -254,16 +254,16 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ZKUDIDManager/Info.plist;
+				INFOPLIST_FILE = ZKUDID/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mushank.ZKUDIDManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mushank.ZKUDID;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		04BDFF421DDB0DCB00B8FBDE /* Release */ = {
+		041B7A351E97A06600C1E135 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
@@ -271,10 +271,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ZKUDIDManager/Info.plist;
+				INFOPLIST_FILE = ZKUDID/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mushank.ZKUDIDManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mushank.ZKUDID;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -283,25 +283,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		04BDFF321DDB0DCB00B8FBDE /* Build configuration list for PBXProject "ZKUDIDManager" */ = {
+		041B7A251E97A06600C1E135 /* Build configuration list for PBXProject "ZKUDID" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				04BDFF3E1DDB0DCB00B8FBDE /* Debug */,
-				04BDFF3F1DDB0DCB00B8FBDE /* Release */,
+				041B7A311E97A06600C1E135 /* Debug */,
+				041B7A321E97A06600C1E135 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		04BDFF401DDB0DCB00B8FBDE /* Build configuration list for PBXNativeTarget "ZKUDIDManager" */ = {
+		041B7A331E97A06600C1E135 /* Build configuration list for PBXNativeTarget "ZKUDID" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				04BDFF411DDB0DCB00B8FBDE /* Debug */,
-				04BDFF421DDB0DCB00B8FBDE /* Release */,
+				041B7A341E97A06600C1E135 /* Debug */,
+				041B7A351E97A06600C1E135 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 04BDFF2F1DDB0DCB00B8FBDE /* Project object */;
+	rootObject = 041B7A221E97A06600C1E135 /* Project object */;
 }
