@@ -1,6 +1,6 @@
 # ZKUDID
 
-[![Travis-CI](https://travis-ci.org/mushank/ZKUDIDManager.svg?branch=master)](https://travis-ci.org/mushank/ZKUDIDManager) [![Carthage](https://img.shields.io/badge/carthage-compatible-green.svg)](https://github.com/Carthage/Carthage) [![CocoaPods](https://img.shields.io/badge/pod-2.0-green.svg)](http://cocoapods.org/?q=ZKUDIDManager) [![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](http://www.apple.com/ios) [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/mushank/ZKUDIDManager/blob/master/LICENSE)
+[![Travis-CI](https://travis-ci.org/mushank/ZKUDID.svg?branch=master)](https://travis-ci.org/mushank/ZKUDID) [![Carthage](https://img.shields.io/badge/carthage-compatible-green.svg)](https://github.com/Carthage/Carthage) [![CocoaPods](https://img.shields.io/badge/pod-2.0-green.svg)](http://cocoapods.org/?q=ZKUDID) [![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](http://www.apple.com/ios) [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/mushank/ZKUDID/blob/master/LICENSE)
 
 
 **Generate and save permanent UDID with IDFV and keychain in iOS device.**
